@@ -1,8 +1,8 @@
 import React from 'react';
 import Slider from 'react-slick';
 
-import certificate1 from './image1c.png'
-import certificate2 from './image2bi.png'
+import certificate1 from './image1c.png';
+import certificate2 from './image2bi.png';
 
 function Carousel() {
   const settings = {
@@ -16,13 +16,20 @@ function Carousel() {
   const certificates = [
     {
       img: certificate1,
-      description: 'description'
+      description: [
+        'Point 1 of Certificate 1',
+        'Point 2 of Certificate 1',
+        'Point 3 of Certificate 1',
+      ],
     },
     {
       img: certificate2,
-      description: 'Certificate 2 description'
+      description: [
+        'Point 1 of Certificate 2',
+        'Point 2 of Certificate 2',
+        'Point 3 of Certificate 2',
+      ],
     },
-    // Dodaj więcej certyfikatów tutaj
   ];
 
   return (
@@ -32,8 +39,12 @@ function Carousel() {
         <Slider {...settings}>
           {certificates.map((cert, index) => (
             <div key={index} className="image-box">
-              <img src={cert.img} alt={`Certificate ${index + 1}`} />
-              <div>{cert.description}</div>
+              <img src={cert.img} alt={`Certificate ${index + 1}`} className="carousel-image" />
+              <ul className="carousel-description">
+                {cert.description.map((point, idx) => (
+                  <li key={idx}>{point}</li>
+                ))}
+              </ul>
             </div>
           ))}
         </Slider>

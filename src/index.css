@@ -158,6 +158,35 @@ div.my-information {
   align-items: center; 
   padding: 10px;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+carousel-section {
+  padding: 2rem;
+  text-align: center;
+}
+
+.carousel-container {
+  max-width: 860px; /* Zmniejsz szerokość kontenera */
+  margin: 0 auto; /* Wycentruj karuzelę */
+}
+
+.carousel-image {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* Upewnij się, że obraz nie jest ucięty */
+}
+
+.carousel-description {
+  text-align: left;
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0;
+  list-style-type: disc; /* Wypunktowana lista */
+  padding-left: 1.5rem; /* Dodaj odstęp od lewej, aby punkty były wyraźnie widoczne */
+  max-width: 400px; /* Ogranicz szerokość opisu */
 }
 
 .image-box img {
