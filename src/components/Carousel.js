@@ -16,7 +16,7 @@ function Carousel() {
   const certificates = [
     {
       img: certificate1,
-      description: 'MUSZE TUTAJ COS ZROBIC, ZEBY MOC DODAC TEKST LINIJKA POD LINIJKA, DODATKOWO ZDJECIA SLABO WIDAC, DO SKILLSOW WARTO BYLOBY DODAC OBRAZKI, DO KONTAKTU TEZ'
+      description: 'description'
     },
     {
       img: certificate2,
