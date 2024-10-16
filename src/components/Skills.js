@@ -1,32 +1,25 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 
 function Skills() {
   const skillRefs = useRef([]);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          } else {
-            entry.target.classList.remove('visible'); // Usuń klasę, jeśli chcesz, aby animacja resetowała się po wyjściu z widoku
-          }
-        });
-      },
-      {
-        threshold: 0.9,
-      }
-    );
+    const currentSkillRefs = skillRefs.current;
 
-    skillRefs.current.forEach((ref) => {
-      if (ref) observer.observe(ref);
-    });
+    const handleScroll = () => {
+      currentSkillRefs.forEach((ref, index) => {
+        if (ref && ref.getBoundingClientRect().top < window.innerHeight) {
+          ref.classList.add('visible');
+        } else {
+          ref.classList.remove('visible');
+        }
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
-      skillRefs.current.forEach((ref) => {
-        if (ref) observer.unobserve(ref);
-      });
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
@@ -47,8 +40,8 @@ function Skills() {
           { name: 'C#', value: 35 },
         ].map((skill, index) => (
           <div
-            key={index}
             className="skill-information"
+            key={skill.name}
             ref={(el) => (skillRefs.current[index] = el)}
           >
             <p className="skill-name">{skill.name}</p>
