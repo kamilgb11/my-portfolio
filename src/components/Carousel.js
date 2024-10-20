@@ -16,19 +16,11 @@ function Carousel() {
   const certificates = [
     {
       img: certificate1,
-      description: [
-        'Point 1 of Certificate 1',
-        'Point 2 of Certificate 1',
-        'Point 3 of Certificate 1',
-      ],
+      description: ['Point 2 of Certificate 1', 'Point 3 of Certificate 1', 'Point 1 of Certificate 1', 'Point 2 of Certificate 1', 'Point 3 of Certificate 1',],
     },
     {
       img: certificate2,
-      description: [
-        'Point 1 of Certificate 2',
-        'Point 2 of Certificate 2',
-        'Point 3 of Certificate 2',
-      ],
+      description: ['Point 1 of Certificate 2', 'Point 2 of Certificate 2','Point 1 of Certificate 2', 'Point 2 of Certificate 2', 'Point 3 of Certificate 2'],
     },
   ];
 
@@ -39,12 +31,16 @@ function Carousel() {
         <Slider {...settings}>
           {certificates.map((cert, index) => (
             <div key={index} className="image-box">
-              <img src={cert.img} alt={`Certificate ${index + 1}`} className="carousel-image" />
-              <ul className="carousel-description">
-                {cert.description.map((point, idx) => (
-                  <li key={idx}>{point}</li>
-                ))}
-              </ul>
+              <div className="carousel-content">
+                <ul className="carousel-description">
+                  {cert.description.map((point, idx) => (
+                    <li key={idx}>{point}</li>
+                  ))}
+                </ul>
+                <div className="carousel-image-container">
+                  <img src={cert.img} alt={`Certificate ${index + 1}`} className="carousel-image" />
+                </div>
+              </div>
             </div>
           ))}
         </Slider>

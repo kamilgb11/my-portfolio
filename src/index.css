@@ -150,61 +150,44 @@ div.my-information {
   background-color: black;
 }
 
-.image-box {
-  margin: 15px;
-  flex: 0 1 calc(25% - 10px); 
-  display: flex; 
-  flex-direction: column; 
-  align-items: center; 
-  padding: 10px;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-}
+/* karuzela */
 
-carousel-section {
-  padding: 2rem;
-  text-align: center;
-}
-
-.carousel-container {
-  max-width: 860px; /* Zmniejsz szerokość kontenera */
-  margin: 0 auto; /* Wycentruj karuzelę */
-}
-
-.carousel-image {
-  max-width: 300px;
-  width: 100%;
-  height: auto;
-  object-fit: contain; /* Upewnij się, że obraz nie jest ucięty */
+.carousel-content {
+  display: flex;
+  align-items: center; /* Wyśrodkowanie pionowe elementów */
+  justify-content: center; /* Wyśrodkowanie poziome */
+  gap: 4rem; /* Odstęp między opisem a obrazkiem */
 }
 
 .carousel-description {
-  text-align: left;
-  font-size: 0.9rem;
-  color: #555;
+  list-style-type: disc;
+  padding-left: 6.5rem;
   margin: 0;
-  list-style-type: disc; /* Wypunktowana lista */
-  padding-left: 1.5rem; /* Dodaj odstęp od lewej, aby punkty były wyraźnie widoczne */
-  max-width: 400px; /* Ogranicz szerokość opisu */
+  max-width: auto; /* Ograniczenie szerokości listy */
 }
 
-.image-box img {
-  min-width: 200px;
-  max-width: 400px; 
-  height: 400px; 
-  object-fit: cover; 
+.carousel-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 700px; /* Zwiększona szerokość kontenera */
+  height: auto; /* Dostosowanie wysokości kontenera */
+  padding: 20px; /* Opcjonalnie, dodanie odstępów wewnątrz kontenera */
 }
 
-.image-box div {
-  text-align: center; 
-  padding-top: 10px; 
+.carousel-image {
+  width: auto; /* Szerokość automatyczna, aby dopasować do kontenera */
+  max-width: 100%; /* Upewnia się, że obrazek nie wyjdzie poza kontener */
+  height: auto; /* Dostosowanie wysokości obrazka */
+  max-height: 450px; /* Maksymalna wysokość, ale bez sztywnego przycinania */
+  object-fit: contain; /* Zachowuje proporcje obrazka bez przycinania */
 }
 
-.image-box a {
-  text-decoration: none;
-  color: inherit; 
+.carousel-description li {
+  margin-bottom: 0.5rem;
 }
+
+/* Koniec karuzeli */
 
 #contact-section {
   margin-top: 50px;
