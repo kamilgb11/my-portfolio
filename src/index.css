@@ -32,6 +32,7 @@ section {
 
 #navbar ul {
   display: flex;
+  margin-right: 12px!important;
   margin: 10px 0 10px auto;
   width: 45%;
   justify-content: space-evenly;
