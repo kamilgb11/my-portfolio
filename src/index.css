@@ -10,12 +10,18 @@ body {
   padding: 0;
   background-color: white;
   font-family: "Poppins",Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+section {
+  margin-top: 1rem;
+  padding-top: 2rem;
 }
 
 #navbar {
   margin: 0;
-  padding: 5px 0;
-  width: 100%;
+  padding: 5px 0 0 0;
+  width: 105%;
   height: 50px;
   position: sticky;
   top: 0;
@@ -27,9 +33,17 @@ body {
 #navbar ul {
   display: flex;
   margin: 10px 0 10px auto;
-  width: 55%;
+  width: 45%;
   justify-content: space-evenly;
   list-style: none;
+}
+
+@media (max-width: 768px) {
+  #navbar ul {
+    flex-direction: flex;
+    width: 90%;
+    align-items: center;
+  }
 }
 
 #navbar ul li a {
@@ -48,22 +62,23 @@ body {
   transition: all 0.2s;
 }
 
+/* Intro pod navbarem */
 
 .intro-image {
   width: 100%;
   height: 300px; 
-  overflow: hidden; 
 }
 
 .intro-image img {
-  width: 100%;
+  width: 105%;
   height: 100%;
   object-fit: cover; 
 }
 
+/* koniec intra */
 
 #welcome-section {
-  margin: 50px;
+  margin: 0px;
   display: flex;
   justify-content: center;
 }
@@ -73,7 +88,7 @@ body {
   margin: 20px;
   width: 500px;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   font-size: 2rem;
   font-family: "Poppins" ,Arial, Helvetica, sans-serif;
   text-align: center;
@@ -81,11 +96,6 @@ body {
 
 .message img {
   max-width: 100%;
-}
-
-section {
-  margin-top: 1rem;
-  padding-top: 2rem;
 }
 
 .section-heading {
@@ -104,9 +114,12 @@ div.my-information {
   text-align: left;
 }
 
+/*  sekcja skilli  */
+
 #skill-section {
   background-color: black;
   color: white;
+  width: 105%;
 }
 
 .skills-container {
@@ -154,33 +167,33 @@ div.my-information {
 
 .carousel-content {
   display: flex;
-  align-items: center; /* Wyśrodkowanie pionowe elementów */
-  justify-content: center; /* Wyśrodkowanie poziome */
-  gap: 4rem; /* Odstęp między opisem a obrazkiem */
+  align-items: center; 
+  justify-content: center; 
+  gap: 4rem; 
 }
 
 .carousel-description {
   list-style-type: disc;
   padding-left: 6.5rem;
   margin: 0;
-  max-width: auto; /* Ograniczenie szerokości listy */
+  max-width: auto; 
 }
 
 .carousel-image-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 700px; /* Zwiększona szerokość kontenera */
-  height: auto; /* Dostosowanie wysokości kontenera */
-  padding: 20px; /* Opcjonalnie, dodanie odstępów wewnątrz kontenera */
+  max-width: 700px; 
+  height: auto; 
+  padding: 20px;
 }
 
 .carousel-image {
-  width: auto; /* Szerokość automatyczna, aby dopasować do kontenera */
-  max-width: 100%; /* Upewnia się, że obrazek nie wyjdzie poza kontener */
-  height: auto; /* Dostosowanie wysokości obrazka */
-  max-height: 450px; /* Maksymalna wysokość, ale bez sztywnego przycinania */
-  object-fit: contain; /* Zachowuje proporcje obrazka bez przycinania */
+  width: auto; 
+  max-width: 100%;
+  height: auto; 
+  max-height: 450px; 
+  object-fit: contain; 
 }
 
 .carousel-description li {
@@ -196,6 +209,7 @@ div.my-information {
   color: white;
   font-size: 1.5rem;
   text-align: center;
+  width: 105%;
 }
 
 #contact-section a {
@@ -203,6 +217,3 @@ div.my-information {
   margin-right: 10px;
   text-decoration: none;
 }
-
-
-
