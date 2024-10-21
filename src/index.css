@@ -78,7 +78,7 @@ section {
 /* koniec intra */
 
 #welcome-section {
-  margin: 0px;
+  margin: 50px;
   display: flex;
   justify-content: center;
 }
@@ -106,6 +106,8 @@ section {
 .about-container {
   display: flex;
   justify-content: center;
+  margin: 50px;
+  margin-bottom: 50px;
 }
 
 div.my-information {
