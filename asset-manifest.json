@@ -1,8 +1,18 @@
 {
   "files": {
     "main.css": "/my-portfolio/static/css/main.cb899467.css",
-    "main.js": "/my-portfolio/static/js/main.23775e89.js",
+    "main.js": "/my-portfolio/static/js/main.75e03139.js",
     "static/js/453.acca0757.chunk.js": "/my-portfolio/static/js/453.acca0757.chunk.js",
+    "static/media/top10kadr.png": "/my-portfolio/static/media/top10kadr.dced97d239b5e6ab1f5a.png",
+    "static/media/tabele.png": "/my-portfolio/static/media/tabele.3d8425bf9e01ecaf5bd7.png",
+    "static/media/powerquery.png": "/my-portfolio/static/media/powerquery.9ca9d3a54a1f393850c5.png",
+    "static/media/excelfunkcje.png": "/my-portfolio/static/media/excelfunkcje.4adf3801a7274ada74de.png",
+    "static/media/top10excel.png": "/my-portfolio/static/media/top10excel.0b4d6cda161377fe5e4d.png",
+    "static/media/googleads.png": "/my-portfolio/static/media/googleads.1c1d050749f2f4f7ba79.png",
+    "static/media/aspnet.png": "/my-portfolio/static/media/aspnet.574623333f274dd567d0.png",
+    "static/media/msacces.png": "/my-portfolio/static/media/msacces.c90a7e3f515817973b8c.png",
+    "static/media/aibiznes.png": "/my-portfolio/static/media/aibiznes.07c31b76ac5f59ebf8b3.png",
+    "static/media/pythoncer.png": "/my-portfolio/static/media/pythoncer.cf70fdf065471b087d2d.png",
     "static/media/image2bi.png": "/my-portfolio/static/media/image2bi.36f2a3ace45146c77983.png",
     "static/media/image1c.png": "/my-portfolio/static/media/image1c.889da03cf0c8ac46574d.png",
     "static/media/slick.svg": "/my-portfolio/static/media/slick.2630a3e3eab21c607e21.svg",
@@ -11,11 +21,11 @@
     "static/media/slick.woff": "/my-portfolio/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/my-portfolio/index.html",
     "main.cb899467.css.map": "/my-portfolio/static/css/main.cb899467.css.map",
-    "main.23775e89.js.map": "/my-portfolio/static/js/main.23775e89.js.map",
+    "main.75e03139.js.map": "/my-portfolio/static/js/main.75e03139.js.map",
     "453.acca0757.chunk.js.map": "/my-portfolio/static/js/453.acca0757.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cb899467.css",
-    "static/js/main.23775e89.js"
+    "static/js/main.75e03139.js"
   ]
 }
