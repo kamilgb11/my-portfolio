@@ -7,6 +7,7 @@ import Skills from './components/Skills';
 import Carousel from './components/Carousel';
 import Contact from './components/Contact';
 
+
 function App() {
   return (
     <div>

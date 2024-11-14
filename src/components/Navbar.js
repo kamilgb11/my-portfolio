@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Navbar() {
+function Navbar({ changeLanguage }) {
   return (
     <nav id="navbar">
       <ul>
@@ -10,6 +10,7 @@ function Navbar() {
         <li><a href="#carousel-section">Certificates</a></li>
         <li><a href="#contact-section">Contact</a></li>
       </ul>
+      
     </nav> 
   );
 }
