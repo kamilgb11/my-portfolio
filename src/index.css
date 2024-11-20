@@ -29,6 +29,42 @@ section {
   }
 }
 
+.language-selector {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.language-selector .flag-icon {
+  width: 30px;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.language-dropdown {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  list-style: none;
+  padding: 5px 0;
+  margin: 0;
+  z-index: 1000;
+}
+
+.language-dropdown li {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.language-dropdown li:hover {
+  background: #f0f0f0;
+}
+
+
 #navbar {
   margin: 0;
   padding: 5px 0 0 0;

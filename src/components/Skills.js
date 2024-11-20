@@ -1,6 +1,10 @@
 import React, { useRef, useEffect } from 'react';
 
-function Skills() {
+function Skills({ lang }) {
+  const translations = {
+    en: 'My skills',
+    pl: 'Moje Umiejętności',
+  };
   const skillRefs = useRef([]);
 
   useEffect(() => {
@@ -25,7 +29,7 @@ function Skills() {
 
   return (
     <section id="skill-section">
-      <h1 className="section-heading">My skills</h1>
+      <h1 className="section-heading">{translations[lang]}</h1>
       <div className="skills-container">
         {[
           { name: 'HTML5', value: 85 },

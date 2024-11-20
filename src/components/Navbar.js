@@ -1,21 +1,43 @@
-import React from 'react';
+import React, { useState } from 'react';
+import plFlag from './plflag.png'; // Zastąp odpowiednią ścieżką
+import enFlag from './enflag.png'; // Zastąp odpowiednią ścieżką
 
-function Navbar({ changeLanguage }) {
+function Navbar({ lang, toggleLanguage }) {
+  const [showLanguageDropdown, setShowLanguageDropdown] = useState(false);
+
+  const toggleDropdown = () => {
+    setShowLanguageDropdown((prev) => !prev);
+  };
+
   return (
     <nav id="navbar">
       <ul>
-        <li><a href="#welcome-section">Home</a></li>
-        <li><a href="#about-section">About</a></li>
-        <li><a href="#skill-section">Skills</a></li>
-        <li><a href="#carousel-section">Certificates</a></li>
-        <li><a href="#contact-section">Contact</a></li>
+        <li><a href="#welcome-section">{lang === 'en' ? 'Home' : 'Start'}</a></li>
+        <li><a href="#about-section">{lang === 'en' ? 'About' : 'O mnie'}</a></li>
+        <li><a href="#skill-section">{lang === 'en' ? 'Skills' : 'Umiejętności'}</a></li>
+        <li><a href="#carousel-section">{lang === 'en' ? 'Certificates' : 'Certyfikaty'}</a></li>
+        <li><a href="#contact-section">{lang === 'en' ? 'Contact' : 'Kontakt'}</a></li>
+        <li className="language-selector">
+          <img
+            src={lang === 'pl' ? plFlag : enFlag}
+            alt={lang === 'pl' ? 'Polish Flag' : 'British Flag'}
+            className="flag-icon"
+            onClick={toggleDropdown}
+          />
+          {showLanguageDropdown && (
+            <ul className="language-dropdown">
+              <li onClick={() => { toggleLanguage('pl'); setShowLanguageDropdown(false); }}>
+                <img src={plFlag} alt="Polish Flag" className="flag-icon" />
+              </li>
+              <li onClick={() => { toggleLanguage('en'); setShowLanguageDropdown(false); }}>
+                <img src={enFlag} alt="British Flag" className="flag-icon" />
+              </li>
+            </ul>
+          )}
+        </li>
       </ul>
-      
-    </nav> 
+    </nav>
   );
 }
-<div id="intro">
-        <img src="https://cdn.pixabay.com/photo/2016/09/26/09/08/binary-1695475_1280.jpg" alt="" />
-      </div>
 
 export default Navbar;

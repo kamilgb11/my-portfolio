@@ -1,17 +1,43 @@
 import React from 'react';
 
-function About() {
+function About({ lang }) {
+  // Obiekt z tłumaczeniami
+  const translations = {
+    en: {
+      heading: "About Me",
+      content: [
+        "I am Kamil.",
+        "I am a student.",
+        "From the age of 11, I devoted a lot of time to my first computer, and I started my adventure with creating websites at the age of 12, mainly with PHP and HTML. At the same time, I was developing skills in other areas, including graphics, where I created signatures and my own layouts. In 2012, however, I chose mechatronics as the direction of further education, temporarily putting my passion aside. Currently, I am studying computer science in business as a front-end developer, at the same time I am taking courses in HTML, CSS, JavaScript, Python, and recently I have even become familiar with it. subject of .NET (VB, C++, ASP). I improve my skills every day, but the real step forward will be to start working in this direction, which I really hope for in the near future."
+      ]
+    },
+    pl: {
+      heading: "O mnie",
+      content: [
+        "Jestem Kamil.",
+        "Jestem studentem.",
+        "Od 11 roku życia poświęcałem dużo czasu na mój pierwszy komputer, a swoją przygodę z tworzeniem stron internetowych zacząłem w wieku 12 lat, głównie na PHP i HTML. Równocześnie w tym czasie rozwijałem umiejętności w innych obszarach, m.in grafika, gdzie tworzyłem sygnatury i własne layouty. W 2012 roku wybrałem jednak mechatronikę jako kierunek dalszej edukacji, tymczasowo odsuwając moją pasję na bok. Obecnie studiuję informatykę w biznesie jako front-end developer, jednocześnie uczęszczam na kursy HTML, CSS, JavaScript, Python a ostatnio nawet zapoznaje się z tematem .NET (VB, C++, ASP). Codziennie doskonale swoje umiejętności, jednak prawdziwym krokiem naprzód będzie rozpoczęcie pracy w tym kierunku, na co bardzo liczę w mam nadzieję niedalekiej przyszłości."
+      ]
+    }
+  };
+
+  // Wybrany język tłumaczeń
+  const t = translations[lang];
+
   return (
     <section id="about-section">
-      <h1 className="section-heading">About Me</h1>
+      <h1 className="section-heading">{t.heading}</h1>
       <div className="about-container">
         <div className="message my-image">
-          <img src="https://cdn.pixabay.com/photo/2021/08/04/13/06/software-developer-6521720_1280.jpg" alt="" />
+          <img
+            src="https://cdn.pixabay.com/photo/2021/08/04/13/06/software-developer-6521720_1280.jpg"
+            alt=""
+          />
         </div>
         <div className="message my-information">
-          <p>I am Kamil.</p>
-          <p>I am student</p>
-          <p>Since age 11, I've devoted considerable time to my first computer, initiating my web development journey at 12, primarily with PHP and HTML. Concurrently, I expanded my skills into other software, SQL databases, and embarked on simple graphic design projects in forums of that era, mostly using GIMP. However, in 2016, I pivoted to mechatronics, temporarily sidelining my passion. Currently, I'm study Business Informatics as a front-end developer, also taking courses in HTML, CSS, JavaScript, Python, etc. I continually strive to hone my skills in this field.</p>
+          {t.content.map((paragraph, index) => (
+            <p key={index}>{paragraph}</p>
+          ))}
         </div>
       </div>
     </section>
