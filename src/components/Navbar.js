@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import plFlag from './plflag.png'; // Zastąp odpowiednią ścieżką
-import enFlag from './enflag.png'; // Zastąp odpowiednią ścieżką
+import plFlag from './plflag.png'; 
+import enFlag from './enflag.png'; 
 
 function Navbar({ lang, toggleLanguage }) {
   const [showLanguageDropdown, setShowLanguageDropdown] = useState(false);

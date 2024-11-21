@@ -1,7 +1,7 @@
 import React from 'react';
 
 function About({ lang }) {
-  // Obiekt z tłumaczeniami
+  
   const translations = {
     en: {
       heading: "About Me",
@@ -14,14 +14,14 @@ function About({ lang }) {
     pl: {
       heading: "O mnie",
       content: [
-        "Jestem Kamil.",
+        "Mam na imię Kamil.",
         "Jestem studentem.",
         "Od 11 roku życia poświęcałem dużo czasu na mój pierwszy komputer, a swoją przygodę z tworzeniem stron internetowych zacząłem w wieku 12 lat, głównie na PHP i HTML. Równocześnie w tym czasie rozwijałem umiejętności w innych obszarach, m.in grafika, gdzie tworzyłem sygnatury i własne layouty. W 2012 roku wybrałem jednak mechatronikę jako kierunek dalszej edukacji, tymczasowo odsuwając moją pasję na bok. Obecnie studiuję informatykę w biznesie jako front-end developer, jednocześnie uczęszczam na kursy HTML, CSS, JavaScript, Python a ostatnio nawet zapoznaje się z tematem .NET (VB, C++, ASP). Codziennie doskonale swoje umiejętności, jednak prawdziwym krokiem naprzód będzie rozpoczęcie pracy w tym kierunku, na co bardzo liczę w mam nadzieję niedalekiej przyszłości."
       ]
     }
   };
 
-  // Wybrany język tłumaczeń
+  
   const t = translations[lang];
 
   return (

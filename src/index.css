@@ -1,13 +1,24 @@
 @import '~slick-carousel/slick/slick.css';
 @import '~slick-carousel/slick/slick-theme.css';
+/* czerwona ramka na testy
+* {
+  outline: 1px solid red; 
+}
+ */
 
 html, body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* Zapobiega przewijaniu poziomemu */
   width: 100%;
   scroll-behavior: smooth;
 }
+
+@media (max-width: 768px) {
+  html {
+    overflow-x: hidden;
+  }
+}
+
 
 body {
   margin: 0;
@@ -29,24 +40,29 @@ section {
   }
 }
 
+/* lang w navbarze */
+
 .language-selector {
   position: relative;
   display: inline-block;
   cursor: pointer;
 }
 
+.flag-icon {
+  width: 30px;
+  height: 20px; 
+}
+
 .language-selector .flag-icon {
   width: 30px;
-  height: auto;
   border-radius: 5px;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .language-dropdown {
   position: absolute;
-  top: 40px;
-  left: 0;
-  background: white;
+  top: 20px; 
+  left: -100%; 
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
   list-style: none;
@@ -54,6 +70,12 @@ section {
   margin: 0;
   z-index: 1000;
 }
+
+@media (max-width: 768px) {
+  .language-dropdown {
+    left: -40%;
+  }
+  }
 
 .language-dropdown li {
   padding: 5px 10px;
@@ -64,6 +86,7 @@ section {
   background: #f0f0f0;
 }
 
+/* navbar */
 
 #navbar {
   margin: 0;
@@ -79,19 +102,21 @@ section {
 
 #navbar ul {
   display: flex;
-  margin: 10px 0 10px auto;  /* Usuwamy dodatkowy margines */
-  width: 45%;     /* Upewnij się, że menu wypełnia całą szerokość */
-  justify-content: space-evenly; /* Rozkłada linki równo */
+  margin: 10px 0 10px auto;  
+  width: 45%;     
+  justify-content: space-evenly; 
   list-style: none;
 }
 
 @media (max-width: 768px) {
-#navbar ul {
-  flex-direction: row; /* Zamień flex na row na mniejszych ekranach */
-  width: 100%;
-  padding: 0;
-}
-}
+  #navbar ul {
+    flex-direction: row; 
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0;
+    height: 30px;
+  }
+  } /* hamburger menu w przyszłości */
 
 
 #navbar ul li a {
@@ -119,7 +144,7 @@ section {
 
 @media (max-width: 768px) {
   .intro-image {
-    height: auto; /* Zamiast ręcznie ustawionej wysokości */
+    height: auto; 
   }
 }
 
@@ -131,7 +156,7 @@ section {
 
 @media (max-width: 768px) {
   .intro-image img {
-    height: auto; /* Zamiast ręcznie ustawionej wysokości */
+    height: auto; 
   }
 }
 
@@ -139,9 +164,11 @@ section {
 /* koniec intra */
 
 #welcome-section {
-  margin: 50px;
   display: flex;
   justify-content: center;
+  max-width: 100%;
+  box-sizing: border-box; 
+  overflow-x: hidden; 
 }
 
 @media (max-width: 768px) {
@@ -150,7 +177,7 @@ section {
     margin-top: 20px;
     margin-right: 0px;
     margin-left: -20px;
-  flex-direction: column; /* Ustawiamy kolumnowy układ na mniejszych ekranach */
+  flex-direction: column; 
 }
 }
 
@@ -293,23 +320,23 @@ div.my-information {
 
 @media (max-width: 760px){
   .carousel-content {
-      flex-direction: column; /* Ustaw kolumnowy układ karuzeli na mniejszych ekranach */
-      gap: 2rem; /* Zmniejszenie odstępów */
+      flex-direction: column; 
+      gap: 2rem; 
     }
   
     .carousel-description {
-      padding-left: 2rem; /* Zmniejszenie paddingu */
+      padding-left: 2rem; 
       margin: 0;
-      text-align: center; /* Centruj tekst */
+      text-align: center; 
     }
   
     .carousel-image-container {
-      max-width: 90%; /* Zmniejsz szerokość obrazu w karuzeli */
+      max-width: 90%; 
       height: auto;
     }
   
     .carousel-image {
-      max-width: 100%; /* Upewnij się, że obraz nie wychodzi poza kontener */
+      max-width: 100%; 
       height: auto;
     }
   }

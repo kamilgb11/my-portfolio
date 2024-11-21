@@ -8,7 +8,7 @@ import Carousel from './components/Carousel';
 import Contact from './components/Contact';
 
 function App() {
-  const [lang, setLang] = React.useState('en');
+  const [lang, setLang] = React.useState('pl');
 
   const toggleLanguage = (newLang) => {
     setLang(newLang);
