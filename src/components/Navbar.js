@@ -14,8 +14,8 @@ function Navbar({ lang, toggleLanguage }) {
       <ul>
         <li><a href="#welcome-section">{lang === 'en' ? 'Home' : 'Start'}</a></li>
         <li><a href="#about-section">{lang === 'en' ? 'About' : 'O mnie'}</a></li>
-        <li><a href="#skill-section">{lang === 'en' ? 'Skills' : 'Umiejętności'}</a></li>
-        <li><a href="#carousel-section">{lang === 'en' ? 'Certificates' : 'Certyfikaty'}</a></li>
+        <li><a href="#skill-section">{lang === 'en' ? 'Skills' : 'Wiedza'}</a></li>
+        <li><a href="#carousel-section">{lang === 'en' ? 'Certificates' : 'Kursy'}</a></li>
         <li><a href="#contact-section">{lang === 'en' ? 'Contact' : 'Kontakt'}</a></li>
         <li className="language-selector">
           <img

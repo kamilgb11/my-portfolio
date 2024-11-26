@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
-import Navbar from './components/Navbar';
-import IntroImage from './components/IntroImage';
-import WelcomeSection from './components/WelcomeSection';
-import About from './components/About';
-import Skills from './components/Skills';
-import Carousel from './components/Carousel';
-import Contact from './components/Contact';
+import React, { useState } from "react";
+import Navbar from "./components/Navbar";
+import IntroImage from "./components/IntroImage";
+import WelcomeSection from "./components/WelcomeSection";
+import About from "./components/About";
+import Skills from "./components/Skills";
+import Carousel from "./components/Carousel";
+import Contact from "./components/Contact";
+import AnimatedBackground from "./components/AnimatedBackground"; 
 
 function App() {
-  const [lang, setLang] = React.useState('pl');
+  const [lang, setLang] = useState("pl");
 
   const toggleLanguage = (newLang) => {
     setLang(newLang);
@@ -16,6 +17,7 @@ function App() {
 
   return (
     <div>
+      <AnimatedBackground /> {}
       <Navbar lang={lang} toggleLanguage={toggleLanguage} />
       <IntroImage />
       <WelcomeSection lang={lang} />
