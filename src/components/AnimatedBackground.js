@@ -8,10 +8,10 @@ const AnimatedBackground = () => {
       {}
       <motion.div
         className="gradient-layer"
-        initial={{ scale: 1, opacity: 0.8 }}
-        animate={{ scale: 1.2, opacity: 1 }}
+        initial={{ scale: 1, opacity: 0.7 }}
+        animate={{ scale: 1.4, opacity: 1 }}
         transition={{
-          duration: 10,
+          duration: 8,
           repeat: Infinity,
           repeatType: "reverse",
         }}

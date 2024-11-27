@@ -98,7 +98,7 @@ function Carousel({ lang }) {
     },
   ];
 
-  return (
+return (
     <section id="carousel-section">
       <h1 className="section-heading">{lang === 'en' ? 'Certificates' : 'Certyfikaty'}</h1>
       <div className="carousel-container">

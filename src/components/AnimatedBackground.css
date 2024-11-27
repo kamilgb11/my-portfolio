@@ -1,32 +1,41 @@
 .animated-background {
-    position: fixed; /* Tło wypełnia cały ekran */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* Ustaw tło za innymi elementami */
-    overflow: hidden; /* Ukryj cokolwiek wykraczającego poza obszar */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  background: radial-gradient(circle, #c9eaff, #a0c0ff, #d8e2f8, #d2e3ee); /* Wyrazisty gradient */
+}
+
+.gradient-layer {
+  position: absolute;
+  width: 250%;
+  height: 250%;
+  background: radial-gradient(circle, #d4f1ff, #d7e5fa, #bad0ff, #c8deff);
+  background-size: 300% 300%;
+  filter: blur(60px); /* Widoczny, ale nie przytłaczający */
+  animation: animateGradient 10s infinite alternate ease-in-out; /* Płynne przejścia */
+}
+
+@keyframes animateGradient {
+  0% {
+    transform: translate(0%, 0%);
   }
-  
-  .gradient-layer {
-    position: absolute;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, #ffffff, #888888, #ffffff);
-    background-size: 300% 300%; 
-    filter: blur(50px); 
-    animation: animateGradient 10s infinite alternate; /*puls*/
+  20% {
+    transform: translate(-20%, -10%);
   }
-  
-  @keyframes animateGradient {
-    0% {
-      transform: translate(0%, 0%);
-    }
-    50% {
-      transform: translate(-50%, -50%);
-    }
-    100% {
-      transform: translate(-20%, -20%);
-    }
+  40% {
+    transform: translate(-40%, -20%);
   }
-  
+  60% {
+    transform: translate(-60%, -30%);
+  }
+  80% {
+    transform: translate(-80%, -40%);
+  }
+  100% {
+    transform: translate(-100%, -50%);
+  }
+}
