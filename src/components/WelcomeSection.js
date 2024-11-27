@@ -2,8 +2,8 @@ import React from 'react';
 import TypewriterEffect from './TypewriterEffect'; 
 
 function WelcomeSection({ lang }) {
-  const firstLine = lang === 'en' ? '#Hello!' : '#Cześć!';
-  const secondLine = lang === 'en' ? '#I am Frontend Developer' : '#Jestem Frontend Developerem';
+  const firstLine = lang === 'en' ? 'HHello!' : 'CCześć!';
+  const secondLine = lang === 'en' ? '#II am Frontend Developer' : '#JJestem Frontend Developerem';
 
   return (
     <section id="welcome-section">
