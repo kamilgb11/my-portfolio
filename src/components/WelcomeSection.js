@@ -1,23 +1,29 @@
 import React from 'react';
-import TypewriterEffect from './TypewriterEffect'; 
+import Typewriter from 'typewriter-effect';
 
 function WelcomeSection({ lang }) {
-  const firstLine = lang === 'en' ? 'HHello!' : 'CCześć!';
-  const secondLine = lang === 'en' ? 'II am Frontend Developer' : 'JJestem Frontend Developerem';
-
   return (
     <section id="welcome-section">
       <div className="message">
         <p>
-          <TypewriterEffect key={firstLine} text={firstLine} speed={100} />
-          <br />
-          <TypewriterEffect key={secondLine} text={secondLine} speed={100} />
+          <Typewriter
+            options={{
+              strings: lang === 'en'
+                ? ['Hello!', 'I am Frontend Developer']
+                : ['Cześć!', 'Jestem Frontend Developerem'],
+              autoStart: true,
+              loop: true, 
+              delay: 85, 
+              deleteSpeed: 50, 
+              cursor: '|', 
+            }}
+          />
         </p>
       </div>
       <div className="message">
         <img
           src="https://cdn.pixabay.com/photo/2017/06/07/13/53/binary-2380422_1280.jpg"
-          alt=""
+          alt="binary"
         />
       </div>
     </section>

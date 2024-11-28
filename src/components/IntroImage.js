@@ -1,4 +1,3 @@
-// src/components/IntroImage.js
 import React from 'react';
 
 function IntroImage() {

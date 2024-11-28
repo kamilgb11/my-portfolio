@@ -6,17 +6,17 @@
   height: 100%;
   z-index: -1;
   overflow: hidden;
-  background: radial-gradient(circle, #c9eaff, #a0c0ff, #d8e2f8, #d2e3ee); /* Wyrazisty gradient */
+  background: radial-gradient(circle, #c9eaff, #91b3f8, #d8e2f8, #c7dbe9); 
 }
 
 .gradient-layer {
   position: absolute;
   width: 250%;
   height: 250%;
-  background: radial-gradient(circle, #d4f1ff, #d7e5fa, #bad0ff, #c8deff);
+  background: radial-gradient(circle, #d4f1ff, #d7e5fa, #adc6fc, #c3dafd);
   background-size: 300% 300%;
-  filter: blur(60px); /* Widoczny, ale nie przytłaczający */
-  animation: animateGradient 10s infinite alternate ease-in-out; /* Płynne przejścia */
+  filter: blur(60px); 
+  animation: animateGradient 10s infinite alternate ease-in-out; 
 }
 
 @keyframes animateGradient {

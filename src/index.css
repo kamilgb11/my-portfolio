@@ -177,7 +177,6 @@ section {
 }
 
 
-
 @media (max-width: 768px) {
   #welcome-section {
     padding: 0 0 0 0;
@@ -208,6 +207,7 @@ section {
   text-align: center;
 }
 
+
 @media (max-width: 768px) {
   .message {
     width: 100%;
@@ -221,7 +221,6 @@ section {
   border-radius: 10px;
   box-shadow: 0 5px 12px rgba(0, 0, 0, 3.2);
 }
-
 
 @media (max-width: 768px) {
   .message img {
@@ -272,7 +271,7 @@ div.my-information {
 .skill-information {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+  transition: opacity 5.5s ease-out, transform 1.5s ease-out;
   padding: 2rem;
   text-align: center;
 }
